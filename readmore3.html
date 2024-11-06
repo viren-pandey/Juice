@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Someone</title>
+<style>
+  /* Basic Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Body Styling */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    overflow: hidden;
+  }
+
+  /* 3D Floating Paper */
+  .paper {
+    width: 300px;
+    height: 280px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: perspective(500px) rotateX(15deg) rotateY(10deg);
+    animation: float 3s ease-in-out infinite;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Notebook Lines Background */
+  .paper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(#e0eafc 0px, #e0eafc 1px, transparent 1px, transparent 24px);
+    z-index: -1;
+    border-radius: 10px;
+  }
+
+  /* Floating Animation */
+  @keyframes float {
+    0%, 100% { transform: perspective(500px) rotateX(15deg) rotateY(10deg) translateY(0); }
+    50% { transform: perspective(500px) rotateX(15deg) rotateY(10deg) translateY(-20px); }
+  }
+
+  /* Text Styling */
+  .text {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+  }
+
+  /* Word Animation */
+  .word {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  /* Read More Button Styling */
+  .read-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .read-more-btn:hover {
+    background-color: #8a1ee9;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Paper Container -->
+<div class="paper">
+  <div class="text">
+    <span class="word">Tumhe</span>
+    <span class="word">Ek</span>
+    <span class="word">Baar</span>
+    <span class="word">Graph</span>
+    <span class="word">Bheja Tha Naaaa🤺</span>
+    <span class="word">{Mathematical Rizzz}</span>
+    <span class="word">Now Combining That With</span>
+    <span class="word">Coding Rizz😁</span>
+  </div>
+  <a href="graph.html"><button class="read-more-btn">Read More</button></a>
+</div>
+
+<script>
+  // JavaScript for word delay effect
+  const words = document.querySelectorAll('.word');
+  words.forEach((word, index) => {
+    setTimeout(() => {
+      word.style.opacity = '1';
+      word.style.transform = 'translateY(0)';
+      word.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    }, index * 600); // Delay each word by 0.6s
+  });
+
+  // Reveal the Read More button after all words have appeared
+  const readMoreBtn = document.querySelector('.read-more-btn');
+  setTimeout(() => {
+    readMoreBtn.style.opacity = '1';
+    readMoreBtn.style.transform = 'translateY(0)';
+  }, words.length * 600);
+</script>
+
+</body>
+</html>
