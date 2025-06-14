@@ -66,11 +66,23 @@
 </head>
 <body>
   <div class="card">
-    <h1>Will you go on a cute lil date with me? 🥹</h1>
-    <p>I’ll bring snacks and silly jokes. You bring that adorable smile!</p>
+    <h1>Just Asking you something which you should not ignore ... would you go on a date with me</h1>
+    <p> I’ll tell my bsilly jokes. You bring that adorable smile!</p>
     <div class="btns">
-      <button class="btn yes" onclick="alert('YAYY! 💖 I’ll start planning now!')">Yes</button>
-      <button class="btn no" onclick="alert('Aww maybe next time 😢')">No</button>
+     <div class="btns">
+  <button class="btn yes" onclick="handleYes()">Yes</button>
+  <button class="btn no" onclick="alert('Ayee dobara sochoo')">No</button>
+</div>
+<script>
+  function handleYes() {
+    alert('YAYY! 💖 I’ll start planning now!');
+    setTimeout(() => {
+      window.location.href = 'graph.html';
+    }, 1000);
+  }
+</script>
+
+     
     </div>
   </div>
 </body>
