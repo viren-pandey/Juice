@@ -1,6 +1,6 @@
-# 🦖 Dino's Special Project
+# Dino's Special Project
 
-Hey Dino! 👋
+Hey  My Dino! 👋
 
 This is a special little project I made just for **you**. Whether you're reading this from a computer, your phone, or even from across the world—know that this was crafted with you in mind.
 
