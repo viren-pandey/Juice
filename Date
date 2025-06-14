@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Cute Date?</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      font-family: 'Arial', sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .card h1 {
+      font-size: 2em;
+      color: #ff6f61;
+    }
+
+    .card p {
+      margin: 20px 0;
+      font-size: 1.2em;
+    }
+
+    .btns {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      color: white;
+    }
+
+    .yes {
+      background-color: #28a745;
+    }
+
+    .no {
+      background-color: #dc3545;
+    }
+
+    .yes:hover {
+      background-color: #218838;
+    }
+
+    .no:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Will you go on a cute lil date with me? 🥹</h1>
+    <p>I’ll bring snacks and silly jokes. You bring that adorable smile!</p>
+    <div class="btns">
+      <button class="btn yes" onclick="alert('YAYY! 💖 I’ll start planning now!')">Yes</button>
+      <button class="btn no" onclick="alert('Aww maybe next time 😢')">No</button>
+    </div>
+  </div>
+</body>
+</html>
